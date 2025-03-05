@@ -1,55 +1,79 @@
+/* 全体のスタイル */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+/* コンテンツ全体のスタイル */
 .container {
     width: 90%;
     max-width: 600px;
-    background: white;
-    padding: 20px;
+    background: #222;
+    padding: 30px;
     margin: 50px auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
 }
 
-h1 {
-    color: #ff4081;
+/* ヘッダー */
+header h1 {
+    font-size: 36px;
+    color: gold;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(255, 215, 0, 0.8);
+}
+
+/* 結婚式詳細 */
+.details {
+    margin: 20px 0;
 }
 
 .date, .venue {
     font-size: 20px;
     font-weight: bold;
-    margin: 10px 0;
+    color: gold;
 }
 
+/* Googleマップ埋め込み */
 .map {
     margin: 20px 0;
 }
 
+h2 {
+    color: gold;
+    font-size: 22px;
+}
+
+/* RSVPボタン */
 .rsvp-button {
     display: inline-block;
-    background-color: #ff4081;
-    color: white;
-    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
     font-size: 18px;
-    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
 .rsvp-button:hover {
-    background-color: #e6006e;
+    background-color: #d4af37;
 }
 
 /* スマホ対応 */
 @media screen and (max-width: 600px) {
     .container {
         width: 95%;
-        padding: 15px;
+        padding: 20px;
     }
 }
