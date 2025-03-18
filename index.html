@@ -7,28 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Jiro & Taro</h1>
-        <p class="subtitle">Wedding Invitation</p>
+    <!-- ヘッダー -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Jiro & Taro</h1>
+            <p>We invite you to celebrate our wedding</p>
+        </div>
     </header>
 
+    <!-- ウェルカムメッセージ -->
     <section class="intro">
+        <h2>Welcome</h2>
         <p>この度、次郎と太郎は結婚する運びとなりました。皆様にお会いできることを楽しみにしております。</p>
     </section>
 
+    <!-- 日時・場所 -->
     <section class="details">
-        <h2>結婚式のご案内</h2>
-        <p class="date">2025年11月2日（日）</p>
-        <p class="venue">KKRホテル博多</p>
+        <h2>Details</h2>
+        <p>Date: 2025年11月2日（日）</p>
+        <p>Venue: KKRホテル博多</p>
     </section>
 
+    <!-- Googleマップ埋め込み -->
     <section class="map">
-        <h2>会場の場所</h2>
-        <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+        <h2>Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
     </section>
 
+    <!-- スケジュール -->
     <section class="schedule">
-        <h2>スケジュール</h2>
+        <h2>Schedule</h2>
         <ul>
             <li>11:30 - 受付開始</li>
             <li>12:00 - 挙式</li>
@@ -37,23 +45,33 @@
         </ul>
     </section>
 
+    <!-- 出欠確認 -->
+    <section class="rsvp">
+        <h2>RSVP</h2>
+        <p>Please confirm your attendance using the button below.</p>
+        <a href="https://www.avispa.co.jp/" class="btn">RSVP</a>
+    </section>
+
+    <!-- ギャラリー -->
     <section class="gallery">
-        <h2>ギャラリー</h2>
+        <h2>Gallery</h2>
         <div class="gallery-container">
-            <img src="images/1.jpg" alt="ギャラリー画像1">
-            <img src="images/2.jpg" alt="ギャラリー画像2">
-            <img src="images/3.jpg" alt="ギャラリー画像3">
+            <img src="images/avispa1.jpg" alt="Gallery Image 1">
+            <img src="images/avispa2.jpg" alt="Gallery Image 2">
+            <img src="images/avispa3.jpg" alt="Gallery Image 3">
         </div>
     </section>
 
-    <section class="rsvp">
-        <h2>出欠確認</h2>
-        <p>以下のリンクから出欠をお知らせください。</p>
-        <a href="https://www.avispa.co.jp/" class="rsvp-button">出欠確認フォームへ</a>
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>FAQ</h2>
+        <p>Q: What time does the event start?</p>
+        <p>A: Reception starts at 11:30 AM.</p>
     </section>
 
+    <!-- フッター -->
     <footer>
-        <p>&copy; 2025 Jiro & Taro's Wedding | Designed by Template-Party</p>
+        <p>&copy; 2025 Jiro & Taro's Wedding. All rights reserved.</p>
     </footer>
 </body>
 </html>
