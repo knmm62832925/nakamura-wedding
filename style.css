@@ -15,7 +15,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 150px 20px;
-  height: 400px; /* 高さを調整 */
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,10 +89,28 @@ section {
   flex-wrap: wrap;
 }
 
+/* PC用（3列表示） */
 .gallery-container img {
-  width: calc(33.33% - 10px);
+  width: calc(33.33% - 10px); /* 3列表示 */
   max-width: 300px;
   border-radius: 10px;
+  object-fit: cover;
+}
+
+/* タブレット・スマホ用（2列表示） */
+@media (max-width: 768px) {
+  .gallery-container img {
+      width: calc(50% - 10px); /* 2列表示 */
+      max-width: 150px;
+  }
+}
+
+/* スマホ（狭い画面）用（1列表示） */
+@media (max-width: 480px) {
+  .gallery-container img {
+      width: 100%; /* 1列表示 */
+      max-width: 100%;
+  }
 }
 
 /* FAQ */
