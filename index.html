@@ -1,43 +1,113 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiro & Taro's Wedding Invitation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- ヘッダー -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Jiro & Taro</h1>
-            <p>We invite you to celebrate our wedding</p>
-        </div>
-    </header>
+/* ============================= */
+/* 全体設定 */
+/* ============================= */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-    <!-- ウェルカムメッセージ -->
-    <section class="intro">
-        <h2>Welcome</h2>
-        <p>この度、次郎と太郎は結婚する運びとなりました。皆様にお会いできることを楽しみにしております。</p>
-    </section>
+/* ============================= */
+/* ヘッダー（カバー画像） */
+/* ============================= */
+/* PC用カバー画像 */
+.hero {
+  background: url('./images/wedding-cover-pc.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 150px 20px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    <!-- 日時・場所 -->
-    <section class="details">
-        <h2>Details</h2>
-        <p>Date: 2025年11月2日（日）</p>
-        <p>Venue: KKRホテル博多</p>
-    </section>
+/* スマホ用カバー画像 */
+@media (max-width: 768px) {
+  .hero {
+    background: url('./images/wedding-cover-sp.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+  }
+}
 
-    <!-- Googleマップ埋め込み -->
-    <section class="map">
-        <h2>Location</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.307168759796!2d130.39762507626347!3d33.58830357337982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35419185ab2ed5ed%3A0x56de57d5c50f9f07!2zS0tSIOS6r-WQjuaOpeeUsOa1i-OCq-ODhOODq-Wkpw!5e0!3m2!1sja!2sjp!4v1710996142740!5m2!1sja!2sjp" 
-            width="100%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-    </section>
+/* ============================= */
+/* スケジュール */
+/* ============================= */
+.schedule ul {
+  list-style: none;
+  padding: 0;
+}
 
-    <!-- スケジュ
+.schedule li {
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+/* ============================= */
+/* ギャラリー（レスポンシブ対応） */
+/* ============================= */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery-container img {
+  width: calc(25% - 10px);
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery-container img {
+    width: calc(50% - 10px);
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ============================= */
+/* 出欠確認ボタン */
+/* ============================= */
+.rsvp .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.rsvp .btn:hover {
+  background-color: #333;
+}
+
+/* ============================= */
+/* フッター */
+/* ============================= */
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ============================= */
+/* FAQ */
+/* ============================= */
+.faq p {
+  font-size: 18px;
+}
