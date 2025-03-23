@@ -18,8 +18,8 @@ body {
     background-size: cover;
     color: #000; /* 文字色を黒に変更 */
     text-align: center;
-    padding: 20px 20px;
-    height: 400px;
+    padding: 20px 20px; /* 上部の余白を調整 */
+    height: 400px; /* 画像サイズを変更しない */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* 最上位に配置 */
@@ -33,6 +33,7 @@ body {
     }
 }
 
+/* ヘッダーテキスト */
 .hero h1 {
     font-size: 48px;
     font-weight: bold;
