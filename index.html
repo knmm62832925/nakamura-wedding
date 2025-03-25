@@ -80,9 +80,28 @@
             color: #000;
         }
 
-        .profile p {
-            font-size: 16px;
+        .profile dl {
+            display: grid;
+            grid-template-columns: auto 1fr; /* 左右で列の幅を調整 */
+            gap: 5px 10px;
+            justify-content: center;
+            align-items: start;
+            text-align: left;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+
+        .profile dt {
+            font-weight: bold;
+            color: #000;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .profile dd {
+            margin: 0;
             color: #555;
+            text-align: left;
             line-height: 1.6;
         }
 
@@ -161,60 +180,23 @@
             <div class="profile">
                 <img src="./images/groom.jpg" alt="Kenta">
                 <h3>中村 建太 (Kenta Nakamura)</h3>
-                <p>趣味：サッカー、旅行、映画鑑賞<br>
-                   性格：明るくておおらか<br>
-                   好きな食べ物：焼肉、ラーメン</p>
+                <dl>
+                    <dt>趣味：</dt><dd>サッカー、旅行、映画鑑賞</dd>
+                    <dt>性格：</dt><dd>明るくておおらか</dd>
+                    <dt>好きな食べ物：</dt><dd>焼肉、ラーメン</dd>
+                </dl>
             </div>
 
             <!-- 新婦プロフィール -->
             <div class="profile">
                 <img src="./images/bride.jpg" alt="Mikoto">
                 <h3>道野 美思 (Mikoto Michino)</h3>
-                <p>趣味：カフェ巡り、料理、読書<br>
-                   性格：優しくて穏やか<br>
-                   好きな食べ物：パスタ、スイーツ</p>
+                <dl>
+                    <dt>趣味：</dt><dd>カフェ巡り、料理、読書</dd>
+                    <dt>性格：</dt><dd>優しくて穏やか</dd>
+                    <dt>好きな食べ物：</dt><dd>パスタ、スイーツ</dd>
+                </dl>
             </div>
-        </div>
-    </section>
-
-    <!-- 日時・場所 -->
-    <section class="details">
-        <h2>Details</h2>
-        <p>Date: 2025年11月2日（日）</p>
-        <p>Venue: KKRホテル博多</p>
-    </section>
-
-    <!-- Googleマップ埋め込み -->
-    <section class="map">
-        <h2>Location</h2>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.019726618048!2d130.39099317629214!3d33.578837073338974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541917f030cf1fb%3A0x131e01bcc2998cd3!2sKKR%20ホテル%20博多!5e0!3m2!1sja!2sjp!4v1742662060699!5m2!1sja!2sjp" 
-            width="100%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-    </section>
-
-    <!-- 出欠確認 -->
-    <section class="rsvp">
-        <h2>RSVP</h2>
-        <p>Please confirm your attendance using the button below.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5xAGmUTx_DK5htGcg7hpeq6yMAr9_2Rlqyu2MMGOd9rE8eA/viewform?usp=header" 
-            class="btn" 
-            target="_blank">
-            RSVP
-        </a>
-    </section>
-
-    <!-- ギャラリー -->
-    <section class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <img src="images/avispa1.jpg" alt="Gallery Image 1">
-            <img src="images/avispa2.jpg" alt="Gallery Image 2">
-            <img src="images/avispa3.jpg" alt="Gallery Image 3">
         </div>
     </section>
 
