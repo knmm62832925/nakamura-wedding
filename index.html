@@ -80,9 +80,10 @@
             color: #000;
         }
 
+        /* プロフィール内のインデント調整 */
         .profile dl {
             display: grid;
-            grid-template-columns: auto 1fr; /* 左右で列の幅を調整 */
+            grid-template-columns: 100px 1fr;
             gap: 5px 10px;
             justify-content: center;
             align-items: start;
@@ -96,6 +97,7 @@
             color: #000;
             text-align: left;
             white-space: nowrap;
+            padding-right: 5px;
         }
 
         .profile dd {
@@ -103,12 +105,47 @@
             color: #555;
             text-align: left;
             line-height: 1.6;
+            padding-left: 5px;
         }
 
         @media (max-width: 768px) {
             .profile {
                 width: 100%;
             }
+
+            .profile dl {
+                grid-template-columns: 90px 1fr;
+            }
+        }
+
+        /* ============================= */
+        /* RSVPのスタイル */
+        /* ============================= */
+        .rsvp {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .rsvp h2 {
+            font-size: 32px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .rsvp .btn {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .rsvp .btn:hover {
+            background-color: #333;
         }
 
         /* ============================= */
@@ -152,6 +189,7 @@
                 width: 100%;
             }
         }
+
     </style>
 </head>
 <body>
@@ -197,6 +235,23 @@
                     <dt>好きな食べ物：</dt><dd>パスタ、スイーツ</dd>
                 </dl>
             </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp">
+        <h2>RSVP</h2>
+        <p>出欠のご回答は、以下のボタンからお願いいたします。</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5xAGmUTx_DK5htGcg7hpeq6yMAr9_2Rlqyu2MMGOd9rE8eA/viewform?usp=header" class="btn" target="_blank">RSVP</a>
+    </section>
+
+    <!-- ギャラリー -->
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="images/avispa1.jpg" alt="Gallery Image 1">
+            <img src="images/avispa2.jpg" alt="Gallery Image 2">
+            <img src="images/avispa3.jpg" alt="Gallery Image 3">
         </div>
     </section>
 
