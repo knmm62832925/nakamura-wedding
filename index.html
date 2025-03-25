@@ -44,6 +44,32 @@
         }
 
         /* ============================= */
+        /* ウェルカムメッセージ */
+        /* ============================= */
+        .intro {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============================= */
         /* プロフィールのスタイル */
         /* ============================= */
         .profile-section {
@@ -94,7 +120,6 @@
         .profile dt {
             font-weight: bold;
             color: #000;
-            text-align: left;
             white-space: nowrap;
             padding-right: 5px;
         }
@@ -102,19 +127,8 @@
         .profile dd {
             margin: 0;
             color: #555;
-            text-align: left;
             line-height: 1.6;
             padding-left: 5px;
-        }
-
-        @media (max-width: 768px) {
-            .profile {
-                width: 100%;
-            }
-
-            .profile dl {
-                grid-template-columns: 90px 1fr;
-            }
         }
 
         /* ============================= */
@@ -132,97 +146,107 @@
             margin-bottom: 20px;
         }
 
-        .schedule p {
+        /* スケジュールを2カラムに分割 */
+        .schedule-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .schedule-item {
+            text-align: left;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .schedule-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .schedule-item p {
             font-size: 18px;
             color: #555;
             line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .schedule-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ============================= */
-        /* 出欠確認のスタイル */
+        /* フッターのスタイル */
         /* ============================= */
-        .rsvp {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #fafafa;
-        }
-
-        .rsvp h2 {
-            font-size: 32px;
-            color: #000;
-            margin-bottom: 20px;
-        }
-
-        .rsvp .btn {
-            display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 12px 30px;
-            font-size: 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .rsvp .btn:hover {
+        footer {
+            padding: 20px;
             background-color: #333;
+            color: #fff;
+            text-align: center;
         }
-
     </style>
 </head>
 <body>
-    <!-- ヘッダー -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Kenta & Mikoto</h1>
-            <p>We invite you to celebrate our wedding</p>
-        </div>
-    </header>
 
-    <!-- ウェルカムメッセージ -->
-    <section class="intro">
-        <h2>Welcome</h2>
-        <p>謹啓<br>
+<!-- ヘッダー -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>Kenta & Mikoto</h1>
+        <p>We invite you to celebrate our wedding</p>
+    </div>
+</header>
+
+<!-- ウェルカムメッセージ -->
+<section class="intro">
+    <h2>Welcome</h2>
+    <p>
+        謹啓<br>
         残暑の候 皆様におかれましては 益々ご清祥のことと お慶び申し上げます。<br><br>
         このたび 私たちは結婚式を挙げることとなりました。<br>
-        つきましては 日頃お世話になっております皆様に 感謝の気持ちを込めて ささやかな小宴を催したく存じます。<br><br>
+        つきましては 日頃お世話になっております皆様に 感謝の気持ちを込めて<br>
+        ささやかな小宴を催したく存じます。<br><br>
         ご多用のところ誠に恐縮ではございますが<br>
         ぜひご出席いただきたく 心よりご案内申し上げます。<br>
         謹白
-        </p>
-    </section>
+    </p>
+</section>
 
-    <!-- スケジュール -->
-    <section class="schedule">
-        <h2>スケジュール</h2>
-        <p><strong>■ 親族</strong><br>
-        挙式：15:00<br>
-        受付：15:30<br>
-        披露宴：16:00（会場：シリウス）</p>
+<!-- スケジュール -->
+<section class="schedule">
+    <h2>スケジュール</h2>
+    <div class="schedule-container">
+        <!-- 左カラム（親族） -->
+        <div class="schedule-item">
+            <h3>■ 親族</h3>
+            <p>挙式：15:00<br>
+            受付：15:30<br>
+            披露宴：16:00（会場：シリウス）</p>
+        </div>
 
-        <p><strong>■ 友人（ガーデンあり）</strong><br>
-        ガーデン記念撮影：15:20<br>
-        受付：15:30<br>
-        披露宴：16:00（会場：シリウス）</p>
-        
-        <p>ご多用中恐縮に存じますが<br>
-        ガーデン記念撮影にもご参列賜りたく<br>
-        当日15時20分までに3Fガーデンへ<br>
-        お越しくださいますようお願い申し上げます。</p>
-        
-        <p><strong>■ 友人（ガーデンなし）</strong><br>
-        受付：15:30<br>
-        披露宴：16:00（会場：シリウス）</p>
-    </section>
+        <!-- 右カラム（友人） -->
+        <div class="schedule-item">
+            <h3>■ 友人（ガーデンあり）</h3>
+            <p>ガーデン記念撮影：15:20<br>
+            受付：15:30<br>
+            披露宴：16:00（会場：シリウス）</p>
+            <h3>■ 友人（ガーデンなし）</h3>
+            <p>受付：15:30<br>
+            披露宴：16:00（会場：シリウス）</p>
+        </div>
+    </div>
+</section>
 
-    <!-- フッター -->
-    <footer>
-        <p>&copy; 2025 Kenta & Mikoto's Wedding. All rights reserved.</p>
-    </footer>
+<!-- フッター -->
+<footer>
+    <p>&copy; 2025 Kenta & Mikoto's Wedding. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
