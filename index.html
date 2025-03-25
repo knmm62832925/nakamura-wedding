@@ -80,7 +80,6 @@
             color: #000;
         }
 
-        /* プロフィール内のインデント調整 */
         .profile dl {
             display: grid;
             grid-template-columns: 100px 1fr;
@@ -119,7 +118,33 @@
         }
 
         /* ============================= */
-        /* RSVPのスタイル */
+        /* スケジュールのスタイル */
+        /* ============================= */
+        .schedule {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .schedule h2 {
+            font-size: 32px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .schedule p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============================= */
+        /* 出欠確認のスタイル */
         /* ============================= */
         .rsvp {
             padding: 40px 20px;
@@ -148,48 +173,6 @@
             background-color: #333;
         }
 
-        /* ============================= */
-        /* ギャラリーのスタイル */
-        /* ============================= */
-        .gallery {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .gallery h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #000;
-        }
-
-        .gallery-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .gallery-container img {
-            width: calc(30% - 10px);
-            max-width: 300px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        @media (max-width: 768px) {
-            .gallery-container img {
-                width: calc(50% - 10px);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-container img {
-                width: 100%;
-            }
-        }
-
     </style>
 </head>
 <body>
@@ -204,55 +187,37 @@
     <!-- ウェルカムメッセージ -->
     <section class="intro">
         <h2>Welcome</h2>
-        <p>
-            この度、<strong>建太</strong>と<strong>美思</strong>は結婚する運びとなりました。<br>
-            皆様にお会いできることを楽しみにしております。
+        <p>謹啓<br>
+        残暑の候 皆様におかれましては 益々ご清祥のことと お慶び申し上げます。<br><br>
+        このたび 私たちは結婚式を挙げることとなりました。<br>
+        つきましては 日頃お世話になっております皆様に 感謝の気持ちを込めて ささやかな小宴を催したく存じます。<br><br>
+        ご多用のところ誠に恐縮ではございますが<br>
+        ぜひご出席いただきたく 心よりご案内申し上げます。<br>
+        謹白
         </p>
     </section>
 
-    <!-- 新郎・新婦プロフィール -->
-    <section class="profile-section">
-        <h2>Our Profile</h2>
-        <div class="profile-container">
-            <!-- 新郎プロフィール -->
-            <div class="profile">
-                <img src="./images/groom.jpg" alt="Kenta">
-                <h3>中村 建太 (Kenta Nakamura)</h3>
-                <dl>
-                    <dt>趣味：</dt><dd>サッカー、旅行、映画鑑賞</dd>
-                    <dt>性格：</dt><dd>明るくておおらか</dd>
-                    <dt>好きな食べ物：</dt><dd>焼肉、ラーメン</dd>
-                </dl>
-            </div>
+    <!-- スケジュール -->
+    <section class="schedule">
+        <h2>スケジュール</h2>
+        <p><strong>■ 親族</strong><br>
+        挙式：15:00<br>
+        受付：15:30<br>
+        披露宴：16:00（会場：シリウス）</p>
 
-            <!-- 新婦プロフィール -->
-            <div class="profile">
-                <img src="./images/bride.jpg" alt="Mikoto">
-                <h3>道野 美思 (Mikoto Michino)</h3>
-                <dl>
-                    <dt>趣味：</dt><dd>カフェ巡り、料理、読書</dd>
-                    <dt>性格：</dt><dd>優しくて穏やか</dd>
-                    <dt>好きな食べ物：</dt><dd>パスタ、スイーツ</dd>
-                </dl>
-            </div>
-        </div>
-    </section>
-
-    <!-- RSVP -->
-    <section class="rsvp">
-        <h2>RSVP</h2>
-        <p>出欠のご回答は、以下のボタンからお願いいたします。</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5xAGmUTx_DK5htGcg7hpeq6yMAr9_2Rlqyu2MMGOd9rE8eA/viewform?usp=header" class="btn" target="_blank">RSVP</a>
-    </section>
-
-    <!-- ギャラリー -->
-    <section class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <img src="images/avispa1.jpg" alt="Gallery Image 1">
-            <img src="images/avispa2.jpg" alt="Gallery Image 2">
-            <img src="images/avispa3.jpg" alt="Gallery Image 3">
-        </div>
+        <p><strong>■ 友人（ガーデンあり）</strong><br>
+        ガーデン記念撮影：15:20<br>
+        受付：15:30<br>
+        披露宴：16:00（会場：シリウス）</p>
+        
+        <p>ご多用中恐縮に存じますが<br>
+        ガーデン記念撮影にもご参列賜りたく<br>
+        当日15時20分までに3Fガーデンへ<br>
+        お越しくださいますようお願い申し上げます。</p>
+        
+        <p><strong>■ 友人（ガーデンなし）</strong><br>
+        受付：15:30<br>
+        披露宴：16:00（会場：シリウス）</p>
     </section>
 
     <!-- フッター -->
