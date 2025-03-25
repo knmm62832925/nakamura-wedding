@@ -5,203 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenta & Mikoto's Wedding Invitation</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ============================= */
-        /* ヘッダーのスタイル */
-        /* ============================= */
-        .hero {
-            background: url('./images/wedding-cover-pc.jpg') no-repeat center center;
-            background-size: contain;
-            background-position: top;
-            color: #000;
-            text-align: center;
-            padding: 20px 20px;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                background: url('./images/wedding-cover-sp.jpg') no-repeat center top;
-                background-size: 100% auto;
-                height: auto;
-            }
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: bold;
-            color: #000;
-            margin-top: 0;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: #000;
-            margin-top: 5px;
-        }
-
-        /* ============================= */
-        /* ウェルカムメッセージ */
-        /* ============================= */
-        .intro {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #ffffff;
-        }
-
-        .intro h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #000;
-        }
-
-        .intro p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ============================= */
-        /* プロフィールのスタイル */
-        /* ============================= */
-        .profile-section {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .profile-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .profile {
-            width: 45%;
-            text-align: center;
-        }
-
-        .profile img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .profile h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #000;
-        }
-
-        .profile dl {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 5px 10px;
-            justify-content: center;
-            align-items: start;
-            text-align: left;
-            margin: 0 auto;
-            max-width: 80%;
-        }
-
-        .profile dt {
-            font-weight: bold;
-            color: #000;
-            white-space: nowrap;
-            padding-right: 5px;
-        }
-
-        .profile dd {
-            margin: 0;
-            color: #555;
-            line-height: 1.6;
-            padding-left: 5px;
-        }
-
-        @media (max-width: 768px) {
-            .profile {
-                width: 100%;
-            }
-
-            .profile dl {
-                grid-template-columns: 90px 1fr;
-            }
-        }
-
-        /* ============================= */
-        /* スケジュールのスタイル */
-        /* ============================= */
-        .schedule {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #fafafa;
-        }
-
-        .schedule h2 {
-            font-size: 32px;
-            color: #000;
-            margin-bottom: 20px;
-        }
-
-        /* スケジュールを2カラムに分割 */
-        .schedule-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .schedule-item {
-            text-align: left;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .schedule-item h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #000;
-        }
-
-        .schedule-item p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .schedule-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ============================= */
-        /* フッターのスタイル */
-        /* ============================= */
-        footer {
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
 
@@ -232,16 +35,29 @@
 <section class="schedule">
     <h2>スケジュール</h2>
     <div class="schedule-container">
+        <!-- 左カラム（親族） -->
         <div class="schedule-item">
             <h3>■ 親族</h3>
-            <p>挙式：15:00<br>受付：15:30<br>披露宴：16:00（会場：シリウス）</p>
+            <p>
+                挙式：15:00<br>
+                受付：15:30<br>
+                披露宴：16:00（会場：シリウス）
+            </p>
         </div>
 
+        <!-- 右カラム（友人） -->
         <div class="schedule-item">
             <h3>■ 友人（ガーデンあり）</h3>
-            <p>ガーデン記念撮影：15:20<br>受付：15:30<br>披露宴：16:00（会場：シリウス）</p>
+            <p>
+                ガーデン記念撮影：15:20<br>
+                受付：15:30<br>
+                披露宴：16:00（会場：シリウス）
+            </p>
             <h3>■ 友人（ガーデンなし）</h3>
-            <p>受付：15:30<br>披露宴：16:00（会場：シリウス）</p>
+            <p>
+                受付：15:30<br>
+                披露宴：16:00（会場：シリウス）
+            </p>
         </div>
     </div>
 </section>
