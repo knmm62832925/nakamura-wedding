@@ -91,6 +91,48 @@
                 width: 100%;
             }
         }
+
+        /* ============================= */
+        /* ギャラリーのスタイル */
+        /* ============================= */
+        .gallery {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .gallery h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .gallery-container img {
+            width: calc(30% - 10px);
+            max-width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container img {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container img {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -129,6 +171,16 @@
                    性格：優しくて穏やか<br>
                    好きな食べ物：パスタ、スイーツ</p>
             </div>
+        </div>
+    </section>
+
+    <!-- ギャラリー -->
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="images/avispa1.jpg" alt="Gallery Image 1">
+            <img src="images/avispa2.jpg" alt="Gallery Image 2">
+            <img src="images/avispa3.jpg" alt="Gallery Image 3">
         </div>
     </section>
 
