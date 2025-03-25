@@ -11,7 +11,7 @@
         /* ============================= */
         .hero {
             background: url('./images/wedding-cover-pc.jpg') no-repeat center center;
-            background-size: contain; /* PCではトリミングなしでそのまま表示 */
+            background-size: contain;
             background-position: top;
             color: #000;
             text-align: center;
@@ -22,16 +22,14 @@
             justify-content: flex-start;
         }
 
-        /* スマホ用の背景サイズ調整 */
         @media (max-width: 768px) {
             .hero {
                 background: url('./images/wedding-cover-sp.jpg') no-repeat center top;
-                background-size: 100% auto; /* スマホでは幅に合わせて表示 */
+                background-size: 100% auto;
                 height: auto;
             }
         }
 
-        /* ヘッダーテキスト */
         .hero h1 {
             font-size: 48px;
             font-weight: bold;
@@ -43,6 +41,55 @@
             font-size: 20px;
             color: #000;
             margin-top: 5px;
+        }
+
+        /* ============================= */
+        /* プロフィールのスタイル */
+        /* ============================= */
+        .profile-section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .profile {
+            width: 45%;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .profile p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .profile {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -61,6 +108,30 @@
         <p>この度、<strong>建太</strong>と<strong>美思</strong>は結婚する運びとなりました。皆様にお会いできることを楽しみにしております。</p>
     </section>
 
+    <!-- 新郎・新婦プロフィール -->
+    <section class="profile-section">
+        <h2>Our Profile</h2>
+        <div class="profile-container">
+            <!-- 新郎プロフィール -->
+            <div class="profile">
+                <img src="./images/groom.jpg" alt="Kenta">
+                <h3>建太 (Kenta)</h3>
+                <p>趣味：サッカー、旅行、映画鑑賞<br>
+                   性格：明るくておおらか<br>
+                   好きな食べ物：焼肉、ラーメン</p>
+            </div>
+
+            <!-- 新婦プロフィール -->
+            <div class="profile">
+                <img src="./images/bride.jpg" alt="MIKOTO">
+                <h3>美思 (MIKOTO)</h3>
+                <p>趣味：カフェ巡り、料理、読書<br>
+                   性格：優しくて穏やか<br>
+                   好きな食べ物：パスタ、スイーツ</p>
+            </div>
+        </div>
+    </section>
+
     <!-- 日時・場所 -->
     <section class="details">
         <h2>Details</h2>
@@ -77,20 +148,8 @@
             height="300" 
             style="border:0;" 
             allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            loading="lazy">
         </iframe>
-    </section>
-
-    <!-- スケジュール -->
-    <section class="schedule">
-        <h2>Schedule</h2>
-        <ul>
-            <li>11:30 - 受付開始</li>
-            <li>12:00 - 挙式</li>
-            <li>13:00 - 披露宴</li>
-            <li>15:30 - お開き</li>
-        </ul>
     </section>
 
     <!-- 出欠確認 -->
@@ -102,23 +161,6 @@
             target="_blank">
             RSVP
         </a>
-    </section>
-
-    <!-- ギャラリー -->
-    <section class="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <img src="images/avispa1.jpg" alt="Gallery Image 1">
-            <img src="images/avispa2.jpg" alt="Gallery Image 2">
-            <img src="images/avispa3.jpg" alt="Gallery Image 3">
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <h2>FAQ</h2>
-        <p>Q: What time does the event start?</p>
-        <p>A: Reception starts at 11:30 AM.</p>
     </section>
 
     <!-- フッター -->
