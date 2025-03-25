@@ -3,14 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiro & Taro's Wedding Invitation</title>
+    <title>Kenta & MIKOTO's Wedding Invitation</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ============================= */
+        /* ヘッダーのスタイル */
+        /* ============================= */
+        .hero {
+            background: url('./images/wedding-cover-pc.jpg') no-repeat center center;
+            background-size: contain; /* PCではトリミングなしでそのまま表示 */
+            background-position: top;
+            color: #000;
+            text-align: center;
+            padding: 20px 20px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        /* スマホ用の背景サイズ調整 */
+        @media (max-width: 768px) {
+            .hero {
+                background: url('./images/wedding-cover-sp.jpg') no-repeat center top;
+                background-size: 100% auto; /* スマホでは幅に合わせて表示 */
+                height: auto;
+            }
+        }
+
+        /* ヘッダーテキスト */
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #000;
+            margin-top: 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #000;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <!-- ヘッダー -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Jiro & Taro</h1>
+            <h1>Kenta & MIKOTO</h1>
             <p>We invite you to celebrate our wedding</p>
         </div>
     </header>
@@ -18,7 +58,7 @@
     <!-- ウェルカムメッセージ -->
     <section class="intro">
         <h2>Welcome</h2>
-        <p>この度、次郎と太郎は結婚する運びとなりました。皆様にお会いできることを楽しみにしております。</p>
+        <p>この度、<strong>建太</strong>と<strong>美思</strong>は結婚する運びとなりました。皆様にお会いできることを楽しみにしております。</p>
     </section>
 
     <!-- 日時・場所 -->
@@ -57,7 +97,11 @@
     <section class="rsvp">
         <h2>RSVP</h2>
         <p>Please confirm your attendance using the button below.</p>
-        <a href="https://www.avispa.co.jp/" class="btn">RSVP</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5xAGmUTx_DK5htGcg7hpeq6yMAr9_2Rlqyu2MMGOd9rE8eA/viewform?usp=header" 
+            class="btn" 
+            target="_blank">
+            RSVP
+        </a>
     </section>
 
     <!-- ギャラリー -->
@@ -79,7 +123,7 @@
 
     <!-- フッター -->
     <footer>
-        <p>&copy; 2025 Jiro & Taro's Wedding. All rights reserved.</p>
+        <p>&copy; 2025 Kenta & MIKOTO's Wedding. All rights reserved.</p>
     </footer>
 </body>
 </html>
