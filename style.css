@@ -16,7 +16,9 @@ body {
     padding: 40px 20px;
 }
 
+/* ============================= */
 /* プロフィール */
+/* ============================= */
 .profile-section {
     padding: 40px 20px;
 }
@@ -28,33 +30,76 @@ body {
 }
 
 .profile img {
-    width: 150px;
-    height: 150px;
+    width: 100px;  /* 100pxに縮小 */
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
 }
 
+.profile h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile dl {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 5px 10px;
+    font-size: 16px;
+}
+
+/* ============================= */
 /* スケジュール */
+/* ============================= */
 .schedule-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
+.schedule-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.schedule-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.schedule-item p {
+    font-size: 16px;
+}
+
+/* ============================= */
 /* 出欠確認 */
+/* ============================= */
 .rsvp {
     padding: 20px;
     text-align: center;
 }
 
+/* ============================= */
 /* ギャラリー */
+/* ============================= */
 .gallery-container {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
+.gallery-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ============================= */
 /* フッター */
+/* ============================= */
 footer {
     padding: 20px;
     background-color: #333;
@@ -62,7 +107,9 @@ footer {
     text-align: center;
 }
 
+/* ============================= */
 /* スマホ対応 */
+/* ============================= */
 @media (max-width: 768px) {
     .schedule-container {
         grid-template-columns: 1fr;
@@ -70,5 +117,10 @@ footer {
 
     .profile-container {
         flex-direction: column;
+    }
+
+    .gallery-container img {
+        width: 100px;
+        height: 100px;
     }
 }
