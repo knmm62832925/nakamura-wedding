@@ -1,0 +1,210 @@
+/* 
+  全体の基本フォントとしてNoto Serif JPを指定。
+  例として読み込み時に「serif」系として使う 
+*/
+body {
+    font-family: 'Noto Serif JP', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* タイトルや見出しのマージンリセット */
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* ============================= */
+/* ヒーローセクション (header.hero) */
+/* ============================= */
+.hero {
+    /* PC用の背景画像 */
+    background: url('./images/wedding-cover-pc.jpg') no-repeat center center;
+    background-size: cover; /* 全面に画像を表示 */
+    height: 100vh;          /* 画面全体の高さを使用 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* 文字が見やすくなるよう影を付与 */
+}
+
+/* ============================= */
+/* ウェルカムメッセージ (intro) */
+/* ============================= */
+.intro {
+    padding: 60px 20px;
+    text-align: center; /* 中央ぞろえ */
+}
+
+.intro p {
+    line-height: 1.8;
+    max-width: 600px; /* 横幅を狭めて読みやすく */
+    margin: 0 auto;
+    /* text-align: center; ← 親要素 .intro で指定済み */
+}
+
+/* ============================= */
+/* プロフィール (profile-section)*/
+/* ============================= */
+.profile-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.profile-section h2 {
+    margin-bottom: 40px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* 画面が狭いときに折り返し表示 */
+}
+
+.profile {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px; /* カードの幅を固定 */
+    text-align: center;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile dl {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 5px 10px;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* ============================= */
+/* スケジュール (schedule)       */
+/* ============================= */
+.schedule {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.schedule-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2カラム */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* 中央寄せ */
+}
+
+.schedule-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.schedule-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.schedule-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* 出欠確認 (rsvp)               */
+/* ============================= */
+.rsvp {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* ボタンデザイン */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #f15a5a;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d04949;
+}
+
+/* ============================= */
+/* ギャラリー (gallery)         */
+/* ============================= */
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ============================= */
+/* フッター (footer)            */
+/* ============================= */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* ============================= */
+/* スマホ対応 (レスポンシブ)     */
+/* ============================= */
+@media (max-width: 768px) {
+    /* スマホで背景を別画像にする例（任意で変更） */
+    .hero {
+        height: 50vh; /* スマホでは少し高さを抑える */
+        background: url('./images/wedding-cover-sp.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .schedule-container {
+        grid-template-columns: 1fr; /* 1カラムに変更 */
+    }
+
+    .gallery-container img {
+        width: 100px;
+        height: 100px;
+    }
+}
