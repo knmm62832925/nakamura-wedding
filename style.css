@@ -181,3 +181,11 @@ footer {
     height: 100px;
   }
 }
+
+.profile dd {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-height: 1.8;
+  font-size: 15px;
+  padding: 0 10px;
+}
