@@ -80,6 +80,7 @@ h1, h2, h3 {
 }
 
 .profile dl {
+  writing-mode: horizontal-tb;
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 5px 10px;
