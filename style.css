@@ -57,14 +57,7 @@ h1, h2, h3 {
   flex-wrap: wrap;
 }
 
-.profile {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 300px;
-  text-align: center;
-}
+
 
 .profile img {
   width: 100px;
@@ -197,4 +190,34 @@ footer {
   line-height: 1.8;
   font-size: 15px;
   text-align: left;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 300px;
+  min-height: 480px;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile h3 {
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+  line-height: 1.4;
+  max-width: 250px;
+  word-break: keep-all;
 }
