@@ -12,6 +12,15 @@
 <link href="style.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-487718364"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-487718364');
+</script>
 </head>
 <body>
 <!-- ヒーローセクション -->
@@ -107,14 +116,14 @@
 <section class="gallery">
 <h2>ギャラリー</h2>
 <div class="gallery-container">
-<a data-lightbox="gallery" data-title="ギャラリー Image 1" href="images/avispa1.jpg"><img alt="ギャラリー Image 1" src="images/avispa1.jpg"/></a>
-<a data-lightbox="gallery" data-title="ギャラリー Image 2" href="images/avispa2.jpg"><img alt="ギャラリー Image 2" src="images/avispa2.jpg"/></a>
-<a data-lightbox="gallery" data-title="ギャラリー Image 3" href="images/avispa3.jpg"><img alt="ギャラリー Image 3" src="images/avispa3.jpg"/></a>
+<a data-lightbox="gallery" data-title="ギャラリー Image 1" href="images/avispa1.jpg" onclick="gtag('event', 'click', { event_category: 'Gallery', event_label: 'avispa1.jpg' });"><img alt="ギャラリー Image 1" src="images/avispa1.jpg"/></a>
+<a data-lightbox="gallery" data-title="ギャラリー Image 2" href="images/avispa2.jpg" onclick="gtag('event', 'click', { event_category: 'Gallery', event_label: 'avispa2.jpg' });"><img alt="ギャラリー Image 2" src="images/avispa2.jpg"/></a>
+<a data-lightbox="gallery" data-title="ギャラリー Image 3" href="images/avispa3.jpg" onclick="gtag('event', 'click', { event_category: 'Gallery', event_label: 'avispa3.jpg' });"><img alt="ギャラリー Image 3" src="images/avispa3.jpg"/></a>
 </div>
 </section>
 <!-- フッター -->
 <footer>
-<p>© 2025 Kenta & Mikoto's Wedding. All rights reserved.</p>
+<p>© 2025 Kenta &amp; Mikoto's Wedding. All rights reserved.</p>
 </footer>
 </body>
 </html>
