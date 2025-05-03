@@ -225,3 +225,8 @@ footer {
   font-size: 15px;
   text-align: left;
 }
+
+.schedule-date {
+  font-size: 1.1em;
+  font-weight: bold;
+}
